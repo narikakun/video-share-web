@@ -7,7 +7,7 @@ window.onload = function () {
     let urlParams = (new URL(document.location)).searchParams;
     let sender = urlParams.get("sender")?true:false;
 
-    ws = new WebSocket('ws://videoshareweb-websocket.nakn.jp:3000');
+    ws = new WebSocket('wss://videoshareweb-websocket.nakn.jp:3000');
     ws.binaryType = "blob";
 
     ws.onopen = function(evt) {
